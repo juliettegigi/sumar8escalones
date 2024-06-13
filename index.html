@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="w-100 w-md-50 py-2 px-4 text-bg-secondary border border-secondary rounded-pill d-flex flex-column justify-content-center align-items-center">
+            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+                <i class="bi bi-gear-fill"></i>
+              </button>
+              
+              <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="staticBackdropLabel">Settings</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <form action="" name="formulario">
+                      <div>
+                        <div class="w-auto mb-2 form-floating">
+                            <select id="intervalo" class="form-select" name="intervalo" >
+                                <option value="700">700 ms</option>
+                                <option value="800">800 ms</option>
+                                <option value="900">900 ms</option>
+                                <option selected value="1000">1000 ms</option>
+                                <option value="1100">1100 ms</option>
+                                <option value="1200">1200 ms</option>
+                                <option value="1300">1300 ms</option>
+                                <option value="1400">1400 ms</option>
+                                <option value="5000">5000 ms</option>
+                            </select>
+                            <label for="intervalo">Seleccionar intervalo de tiempo</label>
+                        </div>
+                      </div>
+                      <div class="d-flex">
+                          <div class="form-floating mb-3">
+                            <input type="number" name="desde" class="form-control" id="inputDesde" value=-30>
+                            <label for="inputDesde">Desde</label>
+                          </div>
+                          <div class="form-floating mb-3">
+                            <input type="number" name="hasta" class="form-control" id="inputHasta" value=50>
+                            <label for="inputHasta">Hasta</label>
+                          </div>
+                      </div>
+                      <div>
+                        <div class="form-floating mb-3">
+                            <input type="number" name="cantidadDeNumerosParaSumar" class="form-control" id="inputCantidad" min=1 max=30 value=10>
+                            <label for="inputCantidad">Cantidad de números para sumar</label>
+                          </div>
+                      </div>
+                      <div>
+                        <button type="submit" class="btn btn-primary">
+                            apply
+                        </button>
+                      </div>
+                  </form>
+                </div>
+              </div>
+            
+            <div class="alto">
+                <div id="nRandom" class="w-auto mb-2 vh-80 d-flex align-items-center justify-content-center text-center">
+                    número random
+                </div>
+                <div class="w-auto d-flex justify-content-center mt-5">
+                    <button id="btnEmpezar" class="btn btn-primary">Empezar</button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
